@@ -4,6 +4,7 @@ use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\C_titles;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,8 @@ use App\Http\Controllers\MyController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::resource('titles',C_titles::class);
+
 Route::get('/my-controller',[MyController::class,'index']);
 Route::get('/my-controller2','App\Http\Controllers\MyController@index');
 
