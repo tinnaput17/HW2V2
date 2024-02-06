@@ -101,7 +101,13 @@
                         </div>
                         <!-- /.card-body -->
                     </div>
+
                     <!-- /.card -->
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                    <table><a href="{{url('logout')}}">Logout</a></table>
+                    </ol>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
