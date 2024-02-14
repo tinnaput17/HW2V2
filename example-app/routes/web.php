@@ -57,3 +57,15 @@ route::post('my-route',function(Request $req){
     //return view('myroute',$data);
     return view('HW4',$data);
 });
+
+Route::get('/my-multiple', function(){
+
+    return view('myfolder.Multiplication');
+});
+
+
+Route::post('/my-multiple', function(Request $req){
+    $data['myinput'] = $req->input('myinput');
+
+    return view('myfolder.Multiplication',$data);
+});
