@@ -17,6 +17,13 @@ use App\Http\Controllers\MyAuth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/multiplication', function(){
+    return view('titles.multiplication');
+});
+
+
 Route::get('/login', [MyAuth::class,'login_view'])->name('login');
 Route::get('/register', [MyAuth::class,'register_view']);
 Route::get('/logout', [MyAuth::class,'logout_process']);
@@ -58,14 +65,3 @@ route::post('my-route',function(Request $req){
     return view('HW4',$data);
 });
 
-Route::get('/my-multiple', function(){
-
-    return view('myfolder.Multiplication');
-});
-
-
-Route::post('/my-multiple', function(Request $req){
-    $data['myinput'] = $req->input('myinput');
-
-    return view('myfolder.Multiplication',$data);
-});
